@@ -1,0 +1,60 @@
+Prompt para Desenvolvimento de Software de Service Desk
+
+Objetivo: Criar um sistema de controle de chamados de próxima geração focado em PMEs, priorizando a redução da carga cognitiva dos agentes e a simplicidade radical de implementação.
++1
+
+1. Arquitetura e Integração
+
+Modelo de Implantação: Design "ready-to-use" com customização no-code para eliminar a necessidade de consultoria técnica.
++1
+
+
+Capacidade Overlay: Opcionalmente, atuar como uma camada de IA inteligente sobre ferramentas legadas (Zendesk, Freshdesk) para evitar migrações traumáticas.
+
+
+Omnicanalidade Real: Centralizar interações de e-mail, chat, WhatsApp e redes sociais em uma interface única, eliminando a dependência de e-mails compartilhados.
++2
+
+2. Inteligência Artificial e Automação
+
+Triagem e Resolução: Implementar IA para triagem automática e chatbots que resolvam entre 20% a 50% dos tickets simples (senhas, "como fazer", hardware básico) sem intervenção humana.
++2
+
+
+Deflexão Inteligente: Portal de autoatendimento com base de conhecimento que sugere soluções baseadas na intenção do usuário antes da abertura do ticket.
++1
+
+
+Prevenção de Duplicidade: Identificar automaticamente múltiplos relatos do mesmo incidente regional para evitar deslocamentos desnecessários da equipe de campo.
+
+3. Gestão Operacional e Métricas
+
+Gestão de Pendentes: Sistema proativo para identificar a "fila fantasma" (tickets no status pendente), notificando as partes e sugerindo ações para evitar o distúrbio das métricas.
++1
+
+
+SLA Adaptativo: Em vez de métricas fixas, utilizar algoritmos que sugerem SLAs realistas baseados na complexidade histórica de cada tipo de chamado.
+
+
+Dashboards de Negócio: Relatórios visuais intuitivos que respondam "onde estamos falhando?" em linguagem clara, evitando jargões técnicos complexos.
++1
+
+4. Experiência do Usuário (UX) e Bem-Estar
+
+Foco no Agente: Interface limpa com o mínimo de cliques possível para resolução e notificações inteligentes que evitem a saturação mental e o burnout.
++1
+
+
+Experiência do Cliente: Portal do usuário final intuitivo, rápido e atualizado, combatendo a negligência comum do mercado com a interface do solicitante.
++1
+
+
+Suporte Localizado: Interface e suporte técnico totalmente em português, com compreensão do contexto empresarial brasileiro.
++1
+
+5. Diferenciais Técnicos
+
+Escalabilidade Fluida: Permitir que uma PME cresça para o nível enterprise sem necessidade de refatoração do sistema ou mudança de plataforma.
+
+
+Preificação por Valor: Modelo de preços transparente baseado em resultados (redução de tickets) em vez de cobrança por "assento" de agente.
