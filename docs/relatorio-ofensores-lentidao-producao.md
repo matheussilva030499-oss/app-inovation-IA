@@ -3,11 +3,8 @@
 | Campo | Conteúdo |
 |---|---|
 | **Documento** | REL-TI-PROD-001 |
-| **Versão** | 0.1 (rascunho) |
 | **Data** | ____/____/________ |
-| **Elaborado por** | ________________________ (TI) |
-| **Solicitado por** | ________________________ (Gerência) |
-| **Áreas envolvidas** | TI · Engenharia · Produção · Manutenção |
+| **Áreas envolvidas** | TI · Área Técnica · Engenharia · Produção · Manutenção |
 | **Objetivo** | Identificar, evidenciar e classificar as principais causas de lentidão/interrupção nas linhas, separando ofensores de infraestrutura/TI de ofensores de processo, configuração e operação |
 
 ---
@@ -20,7 +17,7 @@ O propósito é:
 
 1. Organizar os problemas de forma objetiva (causa → impacto → evidência → responsável sugerido).
 2. Reduzir o apontamento automático à TI sem análise prévia.
-3. Facilitar o alinhamento entre TI e Engenharia quanto às ações corretivas e preventivas.
+3. Facilitar o alinhamento entre TI, Área Técnica e Engenharia quanto às ações corretivas e preventivas.
 4. Servir como base para plano de ação e acompanhamento.
 
 ---
@@ -61,12 +58,12 @@ Este relatório organiza esses ofensores para discussão técnica entre as área
 
 | # | Ofensor | Impacto típico | Área sugerida (primária) | Severidade* | Status |
 |---|---|---|---|---|---|
-| 1 | RAPs com baixa eficiência | Lentidão no posto / fila / timeout | Engenharia / Manutenção (com apoio TI) | Alta | Em análise |
-| 2 | Uso de cabos Categoria 5 | Quedas, retransmissões, lentidão de rede | Engenharia / Infraestrutura / TI | Alta | Em análise |
-| 3 | Erros frequentes de configuração de roteiro | Parada, retrabalho, apontamento indevido | Engenharia | Alta | Em análise |
-| 4 | IP duplicado na linha / postos | Conflito de comunicação, perda de conexão | Engenharia / Produção (com apoio TI) | Crítica | Em análise |
-| 5 | PCs com baixa memória/processamento | Travamentos, demora de tela/sistema | Engenharia / TI | Alta | Em análise |
-| 6 | Desorganização do que passou/não passou | Retrabalho, perda de rastreabilidade, parada | Engenharia / Produção | Alta | Em análise |
+| 1 | RAPs com baixa eficiência | Lentidão no posto / fila / timeout | Engenharia / Área Técnica / Manutenção (apoio TI) | Alta | Em análise |
+| 2 | Uso de cabos Categoria 5 | Quedas, retransmissões, lentidão de rede | Engenharia / Área Técnica / TI | Alta | Em análise |
+| 3 | Erros frequentes de configuração de roteiro | Parada, retrabalho, apontamento indevido | Engenharia / Área Técnica | Alta | Em análise |
+| 4 | IP duplicado na linha / postos | Conflito de comunicação, perda de conexão | Engenharia / Área Técnica / Produção (apoio TI) | Crítica | Em análise |
+| 5 | PCs com baixa memória/processamento | Travamentos, demora de tela/sistema | Engenharia / Área Técnica / TI | Alta | Em análise |
+| 6 | Desorganização do que passou/não passou | Retrabalho, perda de rastreabilidade, parada | Engenharia / Área Técnica / Produção | Alta | Em análise |
 
 \*Severidade sugerida: **Baixa / Média / Alta / Crítica** — ajustar após validação com produção.
 
@@ -117,7 +114,7 @@ Estações/RAPs operando com desempenho abaixo do necessário para o ciclo da li
 - Efeito cascata nos postos seguintes
 - Chamados indevidos para TI (“sistema lento”)
 
-**Área sugerida (primária):** Engenharia / Manutenção  
+**Área sugerida (primária):** Engenharia / Área Técnica / Manutenção  
 **Apoio:** TI (diagnóstico de desempenho, validação de rede/aplicação)
 
 **Evidências**
@@ -160,7 +157,7 @@ Cabeamento Cat5 (ou cabos degradados/não padronizados) em trechos que exigem me
 - Tempo elevado de troubleshooting
 - Percepção errada de “servidor/TI lento”
 
-**Área sugerida (primária):** Engenharia / Infraestrutura de chão de fábrica  
+**Área sugerida (primária):** Engenharia / Área Técnica / Infraestrutura de chão de fábrica  
 **Apoio:** TI (teste de link, validação de porta/switch, evidência de erro de rede)
 
 **Evidências**
@@ -205,7 +202,7 @@ Falhas recorrentes na configuração de roteiro/modelo/postos (ex.: modelo errad
 - Retrabalho de configuração sob pressão
 - Escalada para TI sem ser causa raiz de infraestrutura
 
-**Área sugerida (primária):** Engenharia  
+**Área sugerida (primária):** Engenharia / Área Técnica  
 **Apoio:** TI (quando houver componente de rede/sistema); Produção (validação em linha)
 
 **Evidências**
@@ -250,7 +247,7 @@ Dois ou mais dispositivos/postos utilizando o mesmo endereço IP, gerando confli
 - Diagnóstico demorado
 - Alto risco de reincidência se não houver controle de IP
 
-**Área sugerida (primária):** Engenharia / Produção (cadastro e padronização de posto)  
+**Área sugerida (primária):** Engenharia / Área Técnica / Produção (cadastro e padronização de posto)  
 **Apoio:** TI (detecção de conflito, mapa de rede, reserva de faixa)
 
 **Evidências**
@@ -295,7 +292,7 @@ Computadores de posto com CPU/RAM insuficientes ou saturados, causando lentidão
 - Aumento de chamados genéricos de lentidão
 - Confusão entre “rede lenta” e “máquina lenta”
 
-**Área sugerida (primária):** Engenharia (especificação do posto) + TI (padronização/imagem/diagnóstico)
+**Área sugerida (primária):** Engenharia / Área Técnica (especificação do posto) + TI (padronização/imagem/diagnóstico)
 
 **Evidências**
 - [ ] Print de Gerenciador de Tarefas / uso de RAM-CPU — *Anexo E.1*
@@ -339,7 +336,7 @@ Falta de clareza operacional e sistêmica sobre unidades aprovadas, rejeitadas, 
 - Risco de qualidade/rastreabilidade
 - Tempo gasto em investigação em vez de produzir
 
-**Área sugerida (primária):** Engenharia / Produção  
+**Área sugerida (primária):** Engenharia / Área Técnica / Produção  
 **Apoio:** TI (quando houver falha real de sistema/registro)
 
 **Evidências**
@@ -358,7 +355,7 @@ Falta de clareza operacional e sistêmica sobre unidades aprovadas, rejeitadas, 
 1. Padronizar regra de status (aprovado / rejeitado / retrabalho / pendente).
 2. Checklist de conferência por turno.
 3. Treinamento de apontamento correto no posto.
-4. Revisão de fluxo sistêmico com Engenharia + Produção (+ TI se necessário).
+4. Revisão de fluxo sistêmico com Engenharia + Área Técnica + Produção (+ TI se necessário).
 
 ---
 
@@ -382,7 +379,7 @@ Falta de clareza operacional e sistêmica sobre unidades aprovadas, rejeitadas, 
         |
         v
 4. Encaminhamento pela causa raiz
-   Engenharia / Produção / Manutenção / TI
+   Engenharia / Área Técnica / Produção / Manutenção / TI
         |
         v
 5. Registro no relatório + ação corretiva + dono + prazo
@@ -452,10 +449,11 @@ Recomenda-se adotar o fluxo de triagem deste documento, com evidência mínima o
 
 | Papel | Nome | Assinatura | Data |
 |---|---|---|---|
-| Elaborador (TI) | | | __/__/____ |
-| Gerência solicitante | | | __/__/____ |
+| TI | | | __/__/____ |
+| Área Técnica | | | __/__/____ |
 | Engenharia | | | __/__/____ |
 | Produção | | | __/__/____ |
+| Gerência | | | __/__/____ |
 
 ---
 
