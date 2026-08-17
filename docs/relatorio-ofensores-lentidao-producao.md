@@ -1,130 +1,120 @@
-# Relatório Técnico — Ofensores de Lentidão na Linha de Produção
+# Posicionamento Estratégico — Ofensores de Lentidão na Produção
 
 | Campo | Conteúdo |
 |---|---|
 | **Documento** | REL-TI-PROD-001 |
 | **Data** | ____/____/________ |
-| **Áreas envolvidas** | TI · Área Técnica · Engenharia |
+| **Público** | Gerência de Engenharia · Área Técnica · TI |
 
-**Objetivo:** apontar os principais erros e motivos que geram lentidão/interrupção nas linhas, com evidências e área responsável.
-
----
-
-## 1. Objetivo
-
-Apontar os principais erros e motivos que geram lentidão/interrupção nas linhas de produção, com evidências e área responsável, para alinhar TI, Área Técnica e Engenharia.
+**Alinhamento entre TI, Área Técnica e Engenharia**
 
 ---
 
-## 2. Contexto
+## 1. Objetivo desta apresentação
 
-A TI tem sido acionada como ofensor principal em várias ocorrências, muitas vezes sem verificação completa da causa raiz. Na prática, boa parte dos problemas está ligada a configuração, equipamento e cabeamento — e não à infraestrutura de TI em si.
-
----
-
-## 3. Principais ofensores (visão para apresentação)
-
-| # | Problema / Ofensor | Por que causa lentidão | Área responsável |
-|---|---|---|---|
-| 1 | RAPs com baixa eficiência | Posto lento, timeout e fila no ciclo da linha | Área Técnica / Engenharia |
-| 2 | Cabos Categoria 5 | Queda de link, retransmissão e comunicação instável | Área Técnica / Engenharia |
-| 3 | Erro de configuração de roteiro | Modelo/postos/IPs errados param ou travam o fluxo | Engenharia / Área Técnica |
-| 4 | IP duplicado na linha | Conflito de rede: posto some ou perde conexão | Área Técnica / Engenharia |
-| 5 | PCs com baixa memória/CPU | Travamento e demora na tela/aplicação do posto | Área Técnica / Engenharia |
-| 6 | Desorganização do que passou/não passou | Retrabalho, parada para conferência e perda de ritmo | Engenharia / Área Técnica |
+Deixar claro, para a gerência de Engenharia e da Área Técnica, quais são os reais ofensores de lentidão na linha — com impacto no resultado, responsabilidade e decisão necessária — evitando que a TI continue sendo tratada como causa padrão sem análise de causa raiz.
 
 ---
 
-## 4. Detalhamento dos ofensores
+## 2. Mensagem central
 
-### 4.1 RAPs com baixa eficiência
-Hardware/desempenho abaixo do necessário para o ciclo.  
-**Sintomas:** demora para carregar/confirmar · timeouts · fila no posto  
-**Responsável:** Área Técnica / Engenharia — apoio TI no diagnóstico  
-**Evidência:** [ ] Print/foto — Anexo A
+A lentidão na produção, na maioria das ocorrências recentes, **não nasce de falha estrutural da TI**. Os ofensores recorrentes estão em configuração, desempenho de posto/equipamento, cabeamento e disciplina de processo.
 
-### 4.2 Uso de cabos Categoria 5
-Cabo inadequado ou degradado gera perda de pacotes e lentidão de rede.  
-**Sintomas:** quedas intermitentes · lentidão “vai e volta” · posto perde conexão  
-**Responsável:** Área Técnica / Engenharia — apoio TI na validação de link  
-**Evidência:** [ ] Print/foto — Anexo B
-
-### 4.3 Erros de configuração de roteiro
-Configuração incorreta de modelo, postos ou IPs no roteiro.  
-**Sintomas:** modelo não reconhecido · sequência inconsistente · ajuste emergencial no turno  
-**Responsável:** Engenharia / Área Técnica  
-**Evidência:** [ ] Print/foto — Anexo C
-
-### 4.4 IP duplicado na linha
-Dois dispositivos com o mesmo IP geram conflito de comunicação.  
-**Sintomas:** posto some da rede · erro intermitente · problema “troca de posto” após reinício  
-**Responsável:** Área Técnica / Engenharia — apoio TI na detecção  
-**Evidência:** [ ] Print/foto — Anexo D
-
-### 4.5 PCs com baixa memória e processamento
-Estação saturada (RAM/CPU) causa travamento e lentidão.  
-**Sintomas:** tela lenta · reinício frequente · confusão com “rede lenta”  
-**Responsável:** Área Técnica / Engenharia — apoio TI no diagnóstico  
-**Evidência:** [ ] Print/foto — Anexo E
-
-### 4.6 Desorganização do que passou / não passou
-Falta de controle claro do status gera retrabalho e parada.  
-**Sintomas:** dúvida se já passou · conferência manual · risco de rastreabilidade  
-**Responsável:** Engenharia / Área Técnica  
-**Evidência:** [ ] Print/foto — Anexo F
+Enquanto isso não for tratado de forma conjunta e com dono claro, o problema se repete, o apontamento continua caindo na TI e o tempo de correção aumenta.
 
 ---
 
-## 5. Ação da TI — Treinamento
+## 3. Por que isso é estratégico
 
-A TI irá realizar treinamento dos pontos críticos de configuração e operação, para reduzir reincidência e chamados indevidos. Escopo inicial:
+- Impacto direto em ritmo de linha, disponibilidade e produtividade
+- Retrabalho operacional e desgaste entre áreas
+- Diagnóstico lento quando a causa é apontada sem evidência
+- Risco de decisões erradas (investir em TI quando o ofensor é processo/equipamento)
+- Necessidade de governança: causa raiz → responsável → ação → prazo
 
-- Configuração de IP em RAPs (padronização, validação e prevenção de IP duplicado)
+---
+
+## 4. Ofensores prioritários (visão gerencial)
+
+| # | Ofensor | Impacto no negócio | Responsabilidade primária | Decisão necessária |
+|---|---|---|---|---|
+| 1 | RAPs com baixa eficiência | Perda de ciclo, fila e falsa percepção de “sistema lento” | Área Técnica / Engenharia | Definir spec mínima e plano de upgrade/substituição |
+| 2 | Cabos Categoria 5 | Instabilidade de comunicação e paradas intermitentes | Área Técnica / Engenharia | Padronizar e substituir trechos críticos |
+| 3 | Erro de configuração de roteiro | Parada imediata, retrabalho e atraso de liberação | Engenharia / Área Técnica | Controle de liberação (checklist + dupla verificação) |
+| 4 | IP duplicado na linha | Queda de comunicação e interrupção crítica | Área Técnica / Engenharia | Plano de endereçamento e bloqueio de alteração informal |
+| 5 | PCs com baixa memória/CPU | Travamento de posto e perda de produtividade | Área Técnica / Engenharia | Adequar hardware ao software/processo atual |
+| 6 | Desorganização passou/não passou | Retrabalho, perda de rastreabilidade e tempo improdutivo | Engenharia / Área Técnica | Padronizar status e disciplina de apontamento |
+
+---
+
+## 5. Evidências (anexos)
+
+| Anexo | Ofensor | Evidência |
+|---|---|---|
+| A | RAPs baixa eficiência | [ ] Print/foto |
+| B | Cabos Cat5 | [ ] Print/foto |
+| C | Erro de roteiro | [ ] Print/foto |
+| D | IP duplicado | [ ] Print/foto |
+| E | PCs baixa performance | [ ] Print/foto |
+| F | Passou / não passou | [ ] Print/foto |
+
+---
+
+## 6. Papéis e responsabilidades
+
+| Área | Papel estratégico |
+|---|---|
+| Engenharia | Garantir configuração correta de roteiro/modelo/postos e padronização de processo |
+| Área Técnica | Garantir condição do posto (equipamento, cabo, IP, desempenho) e disciplina operacional |
+| TI | Apoiar diagnóstico com evidência, mapear conflitos de rede/sistema e capacitar as áreas |
+
+---
+
+## 7. Compromisso da TI — Treinamento
+
+A TI realizará treinamento direcionado à Área Técnica e Engenharia:
+
+- Configuração de IP em RAPs (padronização e prevenção de IP duplicado)
 - Configuração e uso do Filebeat (coleta/envio de logs e boas práticas)
-- Checklist básico de verificação antes de escalar ocorrência como “falha de TI”
+- Checklist mínimo antes de classificar a ocorrência como “falha de TI”
 
-**Público sugerido:** Área Técnica e Engenharia  
 **Data prevista:** ____/____/________  
 **Responsável TI:** ____________________
 
 ---
 
-## 6. Plano de ação resumido
+## 8. Decisões solicitadas à gerência
 
-| ID | Ação | Responsável | Prazo | Status |
+- Reconhecer os ofensores acima como prioritários de Engenharia e Área Técnica
+- Definir dono e prazo para cada ação do plano
+- Adotar triagem por causa raiz (com evidência) antes de escalar para TI
+- Apoiar o treinamento da TI e a padronização de IP/Filebeat nos postos
+
+---
+
+## 9. Plano de ação (acompanhamento gerencial)
+
+| ID | Ação | Dono | Prazo | Status |
 |---|---|---|---|---|
-| PA-01 | Corrigir/substituir cabos Cat5 nos trechos críticos | Área Técnica / Engenharia | __/__/____ | Aberto |
-| PA-02 | Eliminar IPs duplicados e padronizar endereçamento | Área Técnica / Engenharia | __/__/____ | Aberto |
-| PA-03 | Revisar e validar configurações de roteiro antes da liberação | Engenharia / Área Técnica | __/__/____ | Aberto |
-| PA-04 | Avaliar/upgrade de RAPs e PCs com baixa performance | Área Técnica / Engenharia | __/__/____ | Aberto |
-| PA-05 | Padronizar controle do que passou/não passou | Engenharia / Área Técnica | __/__/____ | Aberto |
-| PA-06 | Treinamento TI: IP de RAP + Filebeat + checklist | TI | __/__/____ | Aberto |
+| PA-01 | Substituir/padronizar cabos Cat5 nos trechos críticos | Área Técnica / Engenharia | __/__/____ | Aberto |
+| PA-02 | Eliminar IPs duplicados e oficializar endereçamento | Área Técnica / Engenharia | __/__/____ | Aberto |
+| PA-03 | Implantar controle de liberação de roteiro | Engenharia / Área Técnica | __/__/____ | Aberto |
+| PA-04 | Plano de adequação de RAPs/PCs abaixo da spec | Área Técnica / Engenharia | __/__/____ | Aberto |
+| PA-05 | Padronizar status passou/não passou | Engenharia / Área Técnica | __/__/____ | Aberto |
+| PA-06 | Executar treinamento TI (IP RAP + Filebeat + checklist) | TI | __/__/____ | Aberto |
 
 ---
 
-## 7. Conclusão
+## 10. Conclusão
 
-A lentidão na produção não se resume a “problema de TI”. Os ofensores principais observados são desempenho de RAP/PC, cabo Cat5, erro de roteiro, IP duplicado e falha de organização do fluxo. A TI apoiará no diagnóstico e no treinamento; a correção definitiva depende principalmente da Área Técnica e da Engenharia.
+Este não é um relatório operacional de chamado: é um posicionamento estratégico para alinhar as áreas. A TI continuará apoiando com diagnóstico e capacitação, mas a correção definitiva dos principais ofensores depende de decisão e execução da Engenharia e da Área Técnica.
 
 ---
 
-## 8. Aprovações
+## 11. Aprovações
 
 | Área | Nome | Assinatura | Data |
 |---|---|---|---|
 | TI | | | __/__/____ |
 | Área Técnica | | | __/__/____ |
 | Engenharia | | | __/__/____ |
-
----
-
-## 9. Anexos (evidências)
-
-| Anexo | Ofensor | Arquivo / descrição |
-|---|---|---|
-| A | RAPs baixa eficiência | |
-| B | Cabos Cat5 | |
-| C | Erro de roteiro | |
-| D | IP duplicado | |
-| E | PCs baixa performance | |
-| F | Passou / não passou | |
