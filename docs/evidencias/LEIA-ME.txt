@@ -1,0 +1,14 @@
+# Como embutir as imagens automaticamente
+
+Salve as 8 fotos/prints nesta pasta com estes nomes:
+
+1. `01_cabo_sem_presilha.jpg` (ou .png)
+2. `02_rj45_oxidado.jpg`
+3. `03_cabo_cat5.jpg`
+4. `04_rasp_pendurada.jpg`
+5. `05_modelo_roteiro.jpg`
+6. `06_logs_fail_modelo.jpg`
+7. `07_htop_tcl006.jpg`
+8. `08_htop_tcl007.jpg`
+
+Depois avise no chat: “imagens salvas” — eu gero o DOCX já com as fotos embutidas.
